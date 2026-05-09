@@ -1,0 +1,621 @@
+{
+  "source": "examples\\sample.log",
+  "generated_at": "2026-05-09T21:15:53.939488+00:00",
+  "total_entries": 1000,
+  "malformed": 0,
+  "analyzers": [
+    {
+      "name": "topip",
+      "title": "Top IP addresses",
+      "summary": "283 unique IPs across 1,000 requests; top 10 shown",
+      "data": {
+        "total_requests": 1000,
+        "unique_ips": 283,
+        "top": [
+          {
+            "ip": "137.151.10.58",
+            "count": 21
+          },
+          {
+            "ip": "211.210.116.95",
+            "count": 13
+          },
+          {
+            "ip": "222.120.10.236",
+            "count": 13
+          },
+          {
+            "ip": "197.94.180.21",
+            "count": 12
+          },
+          {
+            "ip": "165.26.36.142",
+            "count": 11
+          },
+          {
+            "ip": "12.183.47.226",
+            "count": 11
+          },
+          {
+            "ip": "217.216.21.42",
+            "count": 11
+          },
+          {
+            "ip": "195.234.98.230",
+            "count": 11
+          },
+          {
+            "ip": "198.231.67.82",
+            "count": 11
+          },
+          {
+            "ip": "112.139.111.118",
+            "count": 10
+          }
+        ]
+      }
+    },
+    {
+      "name": "statuscode",
+      "title": "HTTP status codes",
+      "summary": "1,000 requests across 11 distinct status codes",
+      "data": {
+        "total": 1000,
+        "codes": [
+          {
+            "code": 200,
+            "count": 782
+          },
+          {
+            "code": 301,
+            "count": 24
+          },
+          {
+            "code": 302,
+            "count": 21
+          },
+          {
+            "code": 304,
+            "count": 65
+          },
+          {
+            "code": 400,
+            "count": 1
+          },
+          {
+            "code": 401,
+            "count": 17
+          },
+          {
+            "code": 403,
+            "count": 17
+          },
+          {
+            "code": 404,
+            "count": 58
+          },
+          {
+            "code": 500,
+            "count": 12
+          },
+          {
+            "code": 502,
+            "count": 1
+          },
+          {
+            "code": 503,
+            "count": 2
+          }
+        ],
+        "classes": [
+          {
+            "class": 2,
+            "count": 782
+          },
+          {
+            "class": 3,
+            "count": 110
+          },
+          {
+            "class": 4,
+            "count": 93
+          },
+          {
+            "class": 5,
+            "count": 15
+          }
+        ]
+      }
+    },
+    {
+      "name": "notfound",
+      "title": "Top 404 / Not Found paths",
+      "summary": "58 responses with status 404 across 34 unique paths",
+      "data": {
+        "total_404": 58,
+        "unique_paths": 34,
+        "top": [
+          {
+            "path": "/",
+            "count": 6
+          },
+          {
+            "path": "/static/css/main.css",
+            "count": 5
+          },
+          {
+            "path": "/api/v1/products",
+            "count": 4
+          },
+          {
+            "path": "/static/img/logo.svg",
+            "count": 3
+          },
+          {
+            "path": "/tmp",
+            "count": 2
+          },
+          {
+            "path": "/feed.rss",
+            "count": 2
+          },
+          {
+            "path": "/wp-login.php",
+            "count": 2
+          },
+          {
+            "path": "/.aws/credentials",
+            "count": 2
+          },
+          {
+            "path": "/metrics",
+            "count": 2
+          },
+          {
+            "path": "/.env",
+            "count": 2
+          }
+        ]
+      }
+    },
+    {
+      "name": "servererror",
+      "title": "Server errors (5xx)",
+      "summary": "15 5xx responses across 14 (path, code) pairs",
+      "data": {
+        "total": 15,
+        "codes": [
+          {
+            "code": 500,
+            "count": 12
+          },
+          {
+            "code": 502,
+            "count": 1
+          },
+          {
+            "code": 503,
+            "count": 2
+          }
+        ],
+        "top": [
+          {
+            "path": "/blog",
+            "code": 500,
+            "count": 2
+          },
+          {
+            "path": "/static/js/app.js",
+            "code": 500,
+            "count": 1
+          },
+          {
+            "path": "/favicon.ico",
+            "code": 500,
+            "count": 1
+          },
+          {
+            "path": "/metrics",
+            "code": 500,
+            "count": 1
+          },
+          {
+            "path": "/products",
+            "code": 500,
+            "count": 1
+          },
+          {
+            "path": "/static/img/hero.jpg",
+            "code": 500,
+            "count": 1
+          },
+          {
+            "path": "/",
+            "code": 500,
+            "count": 1
+          },
+          {
+            "path": "/static/css/main.css",
+            "code": 500,
+            "count": 1
+          },
+          {
+            "path": "/favicon.ico",
+            "code": 503,
+            "count": 1
+          },
+          {
+            "path": "/api/v1/products",
+            "code": 502,
+            "count": 1
+          }
+        ]
+      }
+    },
+    {
+      "name": "suspiciouspattern",
+      "title": "Suspicious requests",
+      "summary": "29 suspicious requests across 7 categories",
+      "data": {
+        "flagged_total": 29,
+        "categories": [
+          {
+            "category": "config-leak",
+            "count": 10,
+            "severity": "critical",
+            "examples": [
+              "163.135.97.183 GET /.git/HEAD",
+              "160.119.88.220 GET /.aws/credentials",
+              "118.222.66.89 GET /.git/HEAD",
+              "187.167.147.156 POST /.aws/credentials",
+              "75.48.69.25 GET /.env"
+            ]
+          },
+          {
+            "category": "sql-injection",
+            "count": 2,
+            "severity": "critical",
+            "examples": [
+              "160.119.88.220 - GET /search",
+              "56.47.178.65 GET /login"
+            ]
+          },
+          {
+            "category": "shellshock",
+            "count": 2,
+            "severity": "critical",
+            "examples": [
+              "187.167.147.156 GET /config.php.bak",
+              "56.47.178.65 POST /wp-admin/setup-config.php"
+            ]
+          },
+          {
+            "category": "admin-probe",
+            "count": 5,
+            "severity": "high",
+            "examples": [
+              "187.167.147.156 GET /wp-login.php",
+              "118.222.66.89 POST /wp-login.php",
+              "56.47.178.65 GET /admin/login",
+              "56.47.178.65 POST /wp-admin/setup-config.php",
+              "56.47.178.65 POST /wp-admin/setup-config.php"
+            ]
+          },
+          {
+            "category": "xss",
+            "count": 3,
+            "severity": "high",
+            "examples": [
+              "75.48.69.25 - GET /comment",
+              "187.167.147.156 GET /profile",
+              "160.119.88.220 GET /search"
+            ]
+          },
+          {
+            "category": "bad-user-agent",
+            "count": 27,
+            "severity": "medium",
+            "examples": [
+              "163.135.97.183 GET /server-status",
+              "163.135.97.183 GET /tmp",
+              "75.48.69.25 GET /tmp",
+              "163.135.97.183 GET /.git/HEAD",
+              "187.167.147.156 GET /wp-login.php"
+            ]
+          },
+          {
+            "category": "dirbuster",
+            "count": 7,
+            "severity": "medium",
+            "examples": [
+              "163.135.97.183 GET /server-status",
+              "163.135.97.183 GET /tmp",
+              "75.48.69.25 GET /tmp",
+              "75.48.69.25 GET /wp-content/plugins/old/readme.txt",
+              "163.135.97.183 GET /test"
+            ]
+          }
+        ],
+        "top_offenders": [
+          {
+            "ip": "187.167.147.156",
+            "categories": [
+              "admin-probe",
+              "bad-user-agent",
+              "config-leak",
+              "shellshock",
+              "xss"
+            ],
+            "category_count": 5
+          },
+          {
+            "ip": "75.48.69.25",
+            "categories": [
+              "bad-user-agent",
+              "config-leak",
+              "dirbuster",
+              "xss"
+            ],
+            "category_count": 4
+          },
+          {
+            "ip": "160.119.88.220",
+            "categories": [
+              "bad-user-agent",
+              "config-leak",
+              "sql-injection",
+              "xss"
+            ],
+            "category_count": 4
+          },
+          {
+            "ip": "118.222.66.89",
+            "categories": [
+              "admin-probe",
+              "bad-user-agent",
+              "config-leak",
+              "dirbuster"
+            ],
+            "category_count": 4
+          },
+          {
+            "ip": "56.47.178.65",
+            "categories": [
+              "admin-probe",
+              "bad-user-agent",
+              "shellshock",
+              "sql-injection"
+            ],
+            "category_count": 4
+          },
+          {
+            "ip": "163.135.97.183",
+            "categories": [
+              "bad-user-agent",
+              "config-leak",
+              "dirbuster"
+            ],
+            "category_count": 3
+          }
+        ],
+        "brute_force_ips": []
+      }
+    },
+    {
+      "name": "useragent",
+      "title": "User agents",
+      "summary": "1,000 requests across 15 browser families (20 distinct UA strings)",
+      "data": {
+        "total": 1000,
+        "families": [
+          {
+            "family": "Chrome",
+            "count": 354
+          },
+          {
+            "family": "Safari",
+            "count": 142
+          },
+          {
+            "family": "Firefox",
+            "count": 113
+          },
+          {
+            "family": "Mobile Safari",
+            "count": 100
+          },
+          {
+            "family": "Edge",
+            "count": 96
+          },
+          {
+            "family": "Chrome Mobile",
+            "count": 59
+          },
+          {
+            "family": "Googlebot",
+            "count": 45
+          },
+          {
+            "family": "bingbot",
+            "count": 24
+          },
+          {
+            "family": "Other",
+            "count": 21
+          },
+          {
+            "family": "YandexBot",
+            "count": 16
+          }
+        ],
+        "devices": [
+          {
+            "device": "desktop",
+            "count": 735
+          },
+          {
+            "device": "mobile",
+            "count": 159
+          },
+          {
+            "device": "bot",
+            "count": 106
+          }
+        ],
+        "top_strings": [
+          {
+            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "count": 354
+          },
+          {
+            "ua": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Safari/605.1.15",
+            "count": 142
+          },
+          {
+            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:121.0) Gecko/20100101 Firefox/121.0",
+            "count": 113
+          },
+          {
+            "ua": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1",
+            "count": 100
+          },
+          {
+            "ua": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36 Edg/120.0.0.0",
+            "count": 96
+          },
+          {
+            "ua": "Mozilla/5.0 (Linux; Android 14; Pixel 8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+            "count": 59
+          },
+          {
+            "ua": "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)",
+            "count": 45
+          },
+          {
+            "ua": "Mozilla/5.0 (compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)",
+            "count": 24
+          },
+          {
+            "ua": "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)",
+            "count": 16
+          },
+          {
+            "ua": "Mozilla/5.0 (compatible; DuckDuckBot/1.1; +http://duckduckgo.com/duckduckbot.html)",
+            "count": 11
+          }
+        ]
+      }
+    },
+    {
+      "name": "trafficbyhour",
+      "title": "Traffic by hour (UTC)",
+      "summary": "1,000 requests; peak hour 14:00 UTC with 63 hits",
+      "data": {
+        "total": 1000,
+        "hours": [
+          {
+            "hour": 0,
+            "count": 28
+          },
+          {
+            "hour": 1,
+            "count": 21
+          },
+          {
+            "hour": 2,
+            "count": 25
+          },
+          {
+            "hour": 3,
+            "count": 22
+          },
+          {
+            "hour": 4,
+            "count": 25
+          },
+          {
+            "hour": 5,
+            "count": 36
+          },
+          {
+            "hour": 6,
+            "count": 31
+          },
+          {
+            "hour": 7,
+            "count": 47
+          },
+          {
+            "hour": 8,
+            "count": 50
+          },
+          {
+            "hour": 9,
+            "count": 49
+          },
+          {
+            "hour": 10,
+            "count": 48
+          },
+          {
+            "hour": 11,
+            "count": 60
+          },
+          {
+            "hour": 12,
+            "count": 58
+          },
+          {
+            "hour": 13,
+            "count": 52
+          },
+          {
+            "hour": 14,
+            "count": 63
+          },
+          {
+            "hour": 15,
+            "count": 45
+          },
+          {
+            "hour": 16,
+            "count": 51
+          },
+          {
+            "hour": 17,
+            "count": 50
+          },
+          {
+            "hour": 18,
+            "count": 40
+          },
+          {
+            "hour": 19,
+            "count": 53
+          },
+          {
+            "hour": 20,
+            "count": 34
+          },
+          {
+            "hour": 21,
+            "count": 33
+          },
+          {
+            "hour": 22,
+            "count": 44
+          },
+          {
+            "hour": 23,
+            "count": 35
+          }
+        ],
+        "peak": {
+          "hour": 14,
+          "count": 63
+        }
+      }
+    }
+  ]
+}
