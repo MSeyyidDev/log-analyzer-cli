@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "log-analyzer-cli"
+version = "0.1.0"
+description = "A polished Python CLI that generates and analyzes NCSA Combined web-server access logs with security signal detection."
+readme = "README.md"
+requires-python = ">=3.13"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Seyyid Sahin", email = "seyyidsahin2834@gmail.com" },
+]
+keywords = ["logs", "security", "cli", "ncsa", "access-log", "rich", "typer"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: System :: Logging",
+    "Topic :: Security",
+]
+dependencies = [
+    "typer>=0.12.0",
+    "rich>=13.7.0",
+    "faker>=24.0.0",
+    "user-agents>=2.2.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=5.0.0",
+]
+
+[project.scripts]
+log-analyzer = "log_analyzer.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/seyyidsahin2834/log-analyzer-cli"
+Repository = "https://github.com/seyyidsahin2834/log-analyzer-cli"
+Issues = "https://github.com/seyyidsahin2834/log-analyzer-cli/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["log_analyzer*"]
+exclude = ["tests*", "examples*"]
+
+[tool.pytest.ini_options]
+minversion = "8.0"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-ra --strict-markers"
