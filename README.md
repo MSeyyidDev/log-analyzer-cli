@@ -1,5 +1,9 @@
 # log-analyzer-cli
 
+[![CI](https://github.com/MSeyyidDev/log-analyzer-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/MSeyyidDev/log-analyzer-cli/actions/workflows/ci.yml)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 > A polished, Rich-powered Python CLI that **generates** realistic NCSA Combined access logs and **analyzes** them for traffic, errors, and **security signals**.
 
 `log-analyzer-cli` is a single-file install, zero-config tool for engineers who want to demo log-analysis pipelines, prototype incident-response queries, or hand juniors a sandbox full of believable-looking traffic — including SQL-injection probes, brute-force POSTs, dirbusting sweeps, and `.env` leak attempts.
