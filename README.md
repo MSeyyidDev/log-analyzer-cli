@@ -6,15 +6,15 @@
 
 > A polished, Rich-powered Python CLI that **generates** realistic NCSA Combined access logs and **analyzes** them for traffic, errors, and **security signals**.
 
-`log-analyzer-cli` is a single-file install, zero-config tool for engineers who want to demo log-analysis pipelines, prototype incident-response queries, or hand juniors a sandbox full of believable-looking traffic — including SQL-injection probes, brute-force POSTs, dirbusting sweeps, and `.env` leak attempts.
+`log-analyzer-cli` is a single-file install, zero-config tool for engineers who want to demo log-analysis pipelines, prototype incident-response queries, or hand juniors a sandbox full of believable-looking traffic â€” including SQL-injection probes, brute-force POSTs, dirbusting sweeps, and `.env` leak attempts.
 
 ## Highlights
 
-- **Realistic synthetic logs** — long-tail IP distribution, diurnal traffic curve, browser/bot mix, full status-code spread, and ~0.5% embedded suspicious requests by default.
-- **Object-oriented analyzers** — one class per concern, every analyzer returns a JSON-serializable `AnalysisResult` and its own Rich renderer.
-- **Three report formats** — Rich tables, GitHub-flavored Markdown, machine-readable JSON.
-- **First-class security view** — admin probes, config leaks, SQLi/XSS payloads, path traversal, RCE probes, dirbusting, brute-force POSTs, offensive-tool User-Agents.
-- **Tested** — 50+ pytest cases across parser, generator, analyzers, report builder, and CLI runner.
+- **Realistic synthetic logs** â€” long-tail IP distribution, diurnal traffic curve, browser/bot mix, full status-code spread, and ~0.5% embedded suspicious requests by default.
+- **Object-oriented analyzers** â€” one class per concern, every analyzer returns a JSON-serializable `AnalysisResult` and its own Rich renderer.
+- **Three report formats** â€” Rich tables, GitHub-flavored Markdown, machine-readable JSON.
+- **First-class security view** â€” admin probes, config leaks, SQLi/XSS payloads, path traversal, RCE probes, dirbusting, brute-force POSTs, offensive-tool User-Agents.
+- **Tested** â€” 50+ pytest cases across parser, generator, analyzers, report builder, and CLI runner.
 
 ## Demo
 
@@ -48,12 +48,12 @@ $ log-analyzer suspicious access.log
 ## Install
 
 ```bash
-git clone https://github.com/seyyidsahin2834/log-analyzer-cli.git
+git clone https://github.com/MSeyyidDev/log-analyzer-cli.git
 cd log-analyzer-cli
 python -m pip install -e .
 ```
 
-Python 3.13+ required. Dev extras (pytest, coverage) install via `pip install -e ".[dev]"`.
+Python 3.11+ required. Dev extras (pytest, coverage) install via `pip install -e ".[dev]"`.
 
 ## Commands
 
@@ -128,9 +128,9 @@ class BaseAnalyzer:
 
 Sample output lives in [`examples/`](examples/):
 
-- `examples/sample.log` — 1,000-line deterministic synthetic log
-- `examples/report.md` — Markdown report generated from the above
-- `examples/report.json` — JSON report generated from the above
+- `examples/sample.log` â€” 1,000-line deterministic synthetic log
+- `examples/report.md` â€” Markdown report generated from the above
+- `examples/report.json` â€” JSON report generated from the above
 
 Regenerate with:
 
@@ -156,12 +156,15 @@ python -m pip install -e ".[dev]"
 pytest -v
 ```
 
-## Screenshots
+## Demo artifacts
 
-| Generation | Suspicious dashboard |
-| --- | --- |
-| _generation panel placeholder_ | _suspicious table placeholder_ |
+Sample output lives in [`examples/`](examples/):
+
+- [`examples/sample.log`](examples/sample.log) - deterministic 1,000-line access log.
+- [`examples/report.md`](examples/report.md) - Markdown report generated from the sample.
+- [`examples/report.json`](examples/report.json) - machine-readable report for automation.
 
 ## License
 
 MIT - see [LICENSE](LICENSE).
+

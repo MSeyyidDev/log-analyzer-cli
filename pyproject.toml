@@ -44,9 +44,9 @@ dev = [
 log-analyzer = "log_analyzer.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/seyyidsahin2834/log-analyzer-cli"
-Repository = "https://github.com/seyyidsahin2834/log-analyzer-cli"
-Issues = "https://github.com/seyyidsahin2834/log-analyzer-cli/issues"
+Homepage = "https://github.com/MSeyyidDev/log-analyzer-cli"
+Repository = "https://github.com/MSeyyidDev/log-analyzer-cli"
+Issues = "https://github.com/MSeyyidDev/log-analyzer-cli/issues"
 
 [tool.setuptools.packages.find]
 where = ["."]
@@ -58,3 +58,4 @@ minversion = "8.0"
 testpaths = ["tests"]
 python_files = ["test_*.py"]
 addopts = "-ra --strict-markers"
+
